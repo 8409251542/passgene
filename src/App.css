@@ -9,8 +9,8 @@
   width: 100vw;
 }
 .main{
-  height: 50vh;
-  width: 40vw;
+  height: 40vh;
+  width: 30vw;
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.708);
 }
@@ -35,4 +35,31 @@ button{
 }
 .copyBtn{
   font-size: 12px;
+}
+.passGenBtn{
+  font-size: 14px;
+  padding: 20px;
+  width: 100%;
+}
+.slider{
+  display: flex;
+  color: azure;
+  font-weight: 600;
+  flex-direction: column;
+  gap: 5px;
+}
+.slider span{
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 5px;
+}
+.checkBox{
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  color: azure;
+  gap: 10px;
 }
