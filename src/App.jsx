@@ -4,9 +4,9 @@ import usePasswordGenrator from './hooks/use-pass-generator'
 function App() {
   const [length,setLength]=useState(4);
   const [checkboxData,setCheckBoxData]=useState([
-    {title:"Include Uppercase Latter",state:false},
+    {title:"Include Uppercase Letter",state:false},
     {title:"Include Numbers",state:false},
-    {title:"Include Lowercase Latter",state:false},
+    {title:"Include Lowercase Letter",state:false},
     {title:"Include Symbols",state:false}
   ]);
   const handleCheckboxChange=(i)=>{
@@ -14,6 +14,9 @@ function App() {
     udateData[i].state=!udateData[i].state;
     setCheckBoxData(udateData);
   };
+  const handleCopy=()=>{
+    navigator.clipboard.writeText(password);
+  }
   const {password,errorMsg,generatePassword}=usePasswordGenrator();
   return (
     <>
@@ -23,7 +26,7 @@ function App() {
           <div className="pw">
             {password}
           </div>
-          <button className="copyBtn">Copy</button>
+          <button onClick={()=>handleCopy()} className="copyBtn">Copy</button>
         </div>
         <div className="slider">
           <span>
